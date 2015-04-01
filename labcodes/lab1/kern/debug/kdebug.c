@@ -303,6 +303,7 @@ print_stackframe(void) {
       *                   the calling funciton's ebp = ss:[ebp]
       */
 
+
     //
     uint32_t ebp = read_ebp(), eip = read_eip();
 
@@ -318,5 +319,6 @@ print_stackframe(void) {
         eip = ((uint32_t *)ebp)[1];
         ebp = ((uint32_t *)ebp)[0];
     }
+
 }
 
